@@ -1,0 +1,16 @@
+#winLoseScreen {
+    display: none;
+}
+
+#playScreen {
+    display: none;
+}
+
+.input-group {
+    text-align: center;
+}
+
+#errorText {
+    color: red;
+    display: none;
+}

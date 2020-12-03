@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hangman</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS, then Self CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center p-3 ">Hangman</h1>
+    </header>
+    <main>
+        <!-- FIRST PAGE, START GAME SCREEN-->
+        <div id="startGameScreen">
+            <div class="container bg-dark text-light p-3 rounded">
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" id="startGameButton">Start Game</button>
+                </div>
+            </div>
+        </div>
+        <!-- SECOND PAGE, PLAY SCREEN-->
+        <div id="playScreen">
+            <div class="container bg-dark text-light p-3 rounded">
+                <div class="row">
+                    <div class="col">
+                        <h3>Guesses: <span id="guessesNumber"></span></h3>
+                        <br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="text-center">
+                            <h1><span id="wordOutput"></span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <h6>Guess a letter and press enter:</h6>
+                        <input type="text" id="letterInput" aria-describedby="helpId"><br>
+                        <small id="helpId" class="form-text text-muted">You win once you guess the word and press a key, you lose if you run out of guesses.</small>
+                        <span id="errorText"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- THIRD PAGE, WIN/LOSE SCREEN-->
+        <div id="winLoseScreen">
+            <div class="container bg-dark text-light p-3 rounded">
+                <div class="text-center">
+                    <h1><span id="winLoseOutput"></span></h1>
+                </div>
+            </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, then WordList JS, then Self JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="wordList.min.js"></script>
+    <script src="wordBank.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
